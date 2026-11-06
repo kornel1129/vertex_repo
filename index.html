@@ -49,20 +49,15 @@
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        color: var(--ink);
         text-decoration: none;
       }
-      .brand-mark {
-        color: var(--orange);
-        font-size: 39px;
-        font-weight: 800;
-        letter-spacing: -7px;
-        line-height: .8;
-        transform: skew(-12deg);
+      .brand-logo {
+        display: block;
+        width: 112px;
+        height: auto;
+        border-radius: 3px;
+        background: #fff;
       }
-      .brand-name { font-size: 15px; font-weight: 800; letter-spacing: .12em; line-height: 1.05; }
-      .brand-name span { display: block; font-size: 10px; font-weight: 600; letter-spacing: .2em; }
       .nav-links { display: flex; align-items: center; gap: 34px; }
       .nav-links a {
         color: #e9edf0;
@@ -218,9 +213,7 @@
       .contact-form .button { justify-self: start; }
       .footer { background: var(--navy); color: #bac5cd; padding: 23px 0; }
       .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-      .footer .brand-mark { font-size: 31px; }
-      .footer .brand-name { font-size: 12px; }
-      .footer .brand-name span { font-size: 8px; }
+      .footer .brand-logo { width: 96px; }
       .footer p { margin: 0; font-size: 12px; line-height: 1.6; text-align: right; }
       .footer a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; }
 
@@ -233,6 +226,7 @@
       @media (max-width: 560px) {
         .container { width: min(var(--content), calc(100% - 36px)); }
         .nav { min-height: 68px; }
+        .brand-logo { width: 88px; }
         .menu-toggle { display: inline-flex; }
         .nav-links {
           position: absolute;
@@ -270,8 +264,7 @@
     <header class="topbar">
       <nav class="nav container" aria-label="Fő navigáció">
         <a class="brand" href="#fooldal" aria-label="Vertex Automation – főoldal">
-          <span class="brand-mark" aria-hidden="true">V/</span>
-          <span class="brand-name">VERTEX<span>AUTOMATION</span></span>
+          <img class="brand-logo" src="assets/vertex-automation-logo.png" alt="" width="1024" height="768">
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
         <div class="nav-links" id="nav-links">
@@ -379,8 +372,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <a class="brand" href="#fooldal" aria-label="Vertex Automation – vissza a főoldalra">
-          <span class="brand-mark" aria-hidden="true">V/</span>
-          <span class="brand-name">VERTEX<span>AUTOMATION</span></span>
+          <img class="brand-logo" src="assets/vertex-automation-logo.png" alt="" width="1024" height="768">
         </a>
         <p>Ipari automatizálás · PLC- és robotprogramozás · Villamos tervezés<br><a href="mailto:info@vertexautomation.hu">info@vertexautomation.hu</a></p>
       </div>
