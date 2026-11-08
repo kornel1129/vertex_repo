@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07131d">
+    <meta name="description" content="A Vertex Automation impresszuma és cégadatai.">
+    <title>Impresszum | Vertex Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f5f7f9;
+        --muted: #aab6c0;
+        --navy: #07131d;
+        --navy-soft: #0c1c29;
+        --orange: #f47b16;
+        --paper: #f4f6f7;
+        --text: #13202a;
+        --content: 1160px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: var(--paper);
+        color: var(--text);
+        font-family: "DM Sans", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; }
+      .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+      .topbar { background: var(--navy); }
+      .nav {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand { display: inline-flex; align-items: center; text-decoration: none; }
+      .brand-logo { display: block; width: 112px; height: auto; border-radius: 3px; background: #fff; }
+      .nav-links { display: flex; align-items: center; gap: 34px; }
+      .nav-links a {
+        color: #e9edf0;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .nav-links a:hover, .nav-links a:focus-visible, .nav-links .current { color: var(--orange); }
+      .menu-toggle {
+        display: none;
+        border: 1px solid rgb(255 255 255 / 24%);
+        border-radius: 6px;
+        background: transparent;
+        color: white;
+        font: inherit;
+        padding: 8px 11px;
+      }
+      main { min-height: calc(100vh - 174px); padding: 76px 0; }
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--orange);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        color: var(--text);
+        font-size: clamp(34px, 5vw, 52px);
+        font-weight: 800;
+        letter-spacing: -.04em;
+        line-height: 1.1;
+      }
+      .intro { max-width: 700px; margin: 17px 0 32px; color: #65717a; line-height: 1.7; }
+      .details {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        border: 1px solid #e4e9ec;
+        border-radius: 8px;
+        background: #e4e9ec;
+        box-shadow: 0 8px 24px rgb(19 32 42 / 5%);
+      }
+      .detail { min-height: 100px; background: #fff; padding: 21px 24px; }
+      .detail h2 { margin: 0 0 8px; font-size: 14px; }
+      .detail p { margin: 0; color: #64717b; font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+      .notice { margin: 22px 0 0; color: #65717a; font-size: 13px; line-height: 1.6; }
+      .notice strong { color: var(--text); }
+      .footer { background: var(--navy); color: #bac5cd; padding: 23px 0; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .footer .brand-logo { width: 96px; }
+      .footer p { margin: 0; font-size: 12px; line-height: 1.6; text-align: right; }
+      .footer a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #ffb267; outline-offset: 3px; }
+      @media (max-width: 560px) {
+        .container { width: min(var(--content), calc(100% - 36px)); }
+        .nav { min-height: 68px; }
+        .brand-logo { width: 88px; }
+        .menu-toggle { display: inline-flex; }
+        .nav-links {
+          position: absolute;
+          z-index: 1;
+          top: 67px;
+          right: 18px;
+          left: 18px;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          border: 1px solid rgb(255 255 255 / 12%);
+          border-radius: 7px;
+          background: #0b1b27;
+          padding: 8px;
+        }
+        .nav-links.is-open { display: grid; }
+        .nav-links a { padding: 13px 12px; }
+        main { padding: 58px 0; }
+        .details { grid-template-columns: 1fr; }
+        .detail { min-height: 0; padding: 18px 20px; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+        .footer p { text-align: left; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav container" aria-label="Fő navigáció">
+        <a class="brand" href="index.html#fooldal" aria-label="Vertex Automation – főoldal">
+          <img class="brand-logo" src="assets/vertex-automation-logo.png" alt="" width="1024" height="768">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#fooldal">Főoldal</a>
+          <a href="index.html#szolgaltatasok">Szolgáltatások</a>
+          <a href="index.html#kapcsolat">Kapcsolat</a>
+          <a class="current" href="impresszum.html" aria-current="page">Impresszum</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <p class="eyebrow">Vertex Automation</p>
+        <h1>Impresszum</h1>
+        <p class="intro">A weboldalt üzemeltető vállalkozás adatai:</p>
+
+        <section class="details" aria-label="Cégadatok">
+          <article class="detail">
+            <h2>Cégnév</h2>
+            <p>[A vállalkozás teljes neve]</p>
+          </article>
+          <article class="detail">
+            <h2>Székhely</h2>
+            <p>[Irányítószám, település, közterület, házszám]</p>
+          </article>
+          <article class="detail">
+            <h2>Postacím</h2>
+            <p>[Postacím, ha eltér a székhelytől]</p>
+          </article>
+          <article class="detail">
+            <h2>Cégjegyzékszám / nyilvántartási szám</h2>
+            <p>[Cégjegyzékszám vagy nyilvántartási szám]</p>
+          </article>
+          <article class="detail">
+            <h2>Nyilvántartásba bejegyző hatóság</h2>
+            <p>[Illetékes cégbíróság vagy nyilvántartó hatóság]</p>
+          </article>
+          <article class="detail">
+            <h2>Adószám</h2>
+            <p>[Adószám]</p>
+          </article>
+          <article class="detail">
+            <h2>Képviselő</h2>
+            <p>[A vállalkozás képviseletére jogosult személy neve]</p>
+          </article>
+          <article class="detail">
+            <h2>Kapcsolat</h2>
+            <p><a href="mailto:info@vertexautomation.hu">info@vertexautomation.hu</a><br>[Telefonszám]</p>
+          </article>
+          <article class="detail">
+            <h2>Tárhelyszolgáltató</h2>
+            <p>[A tárhelyszolgáltató neve, címe és elérhetősége]</p>
+          </article>
+        </section>
+        <p class="notice"><strong>Élesítés előtt:</strong> cseréld ki a szögletes zárójelben szereplő helyőrzőket a vállalkozás valós adataira.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html#fooldal" aria-label="Vertex Automation – vissza a főoldalra">
+          <img class="brand-logo" src="assets/vertex-automation-logo.png" alt="" width="1024" height="768">
+        </a>
+        <p>Ipari automatizálás · PLC- és robotprogramozás · Villamos tervezés<br><a href="mailto:info@vertexautomation.hu">info@vertexautomation.hu</a><br><a href="impresszum.html" aria-current="page">Impresszum</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("is-open", !isOpen);
+      });
+
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("is-open");
+        }
+      });
+    </script>
+  </body>
+</html>
